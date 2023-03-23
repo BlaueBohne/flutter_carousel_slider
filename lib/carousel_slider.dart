@@ -306,8 +306,8 @@ class CarouselSliderState extends State<CarouselSlider>
         scrollbars: false,
         overscroll: false,
         dragDevices: {
-              widget.disableGesture==false ? PointerDeviceKind.unknown : PointerDeviceKind.touch,
-              widget.disableGesture==false ? PointerDeviceKind.unknown : PointerDeviceKind.mouse,
+              widget.disableGesture==false ? PointerDeviceKind.touch : PointerDeviceKind.unknown,
+              widget.disableGesture==false ? PointerDeviceKind.mouse : PointerDeviceKind.unknown,
         },
       ),
       clipBehavior: widget.options.clipBehavior,
