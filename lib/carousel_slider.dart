@@ -20,7 +20,7 @@ class CarouselSlider extends StatefulWidget {
   /// [CarouselOptions] to create a [CarouselState] with
   final CarouselOptions options;
 
-  final bool? disableGesture;
+  bool? disableGesture = false;
 
   /// The widgets to be shown in the carousel of default constructor
   final List<Widget>? items;
@@ -306,8 +306,8 @@ class CarouselSliderState extends State<CarouselSlider>
         scrollbars: false,
         overscroll: false,
         dragDevices: {
-          PointerDeviceKind.touch,
-          PointerDeviceKind.mouse,
+              widget.disableGesture==false ? PointerDeviceKind.touch : PointerDeviceKind.unknown,
+              widget.disableGesture==false ? PointerDeviceKind.mouse : PointerDeviceKind.unknown,
         },
       ),
       clipBehavior: widget.options.clipBehavior,
