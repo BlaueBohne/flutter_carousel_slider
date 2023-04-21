@@ -93,6 +93,7 @@ class CarouselSliderState extends State<CarouselSlider>
 
     // pageController needs to be re-initialized to respond to state changes
     pageController = PageController(
+      keepPage: true,
       viewportFraction: options.viewportFraction,
       initialPage: carouselState!.realPage,
     );

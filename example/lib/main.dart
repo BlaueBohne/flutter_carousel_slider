@@ -534,7 +534,7 @@ class _CarouselChangeReasonDemoState extends State<CarouselChangeReasonDemo> {
           children: <Widget>[
             Expanded(
               child: CarouselSlider(
-                disableGesture: false,
+                disableGesture: true,
                 items: imageSliders,
                 options: CarouselOptions(
                   enlargeCenterPage: true,
@@ -558,7 +558,6 @@ class _CarouselChangeReasonDemoState extends State<CarouselChangeReasonDemo> {
                   child: ElevatedButton(
                     onPressed: () {
                       _controller.nextPage();
-                      print("check");
                     },
                     child: Text('→'),
                   ),
